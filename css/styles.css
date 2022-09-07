@@ -1,0 +1,97 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+#header, .section-title {
+    text-align: center;
+}
+
+#header {
+    padding: 1em 10%;
+    color: #f7ece1;
+    background-color: #242038;
+}
+
+#header h1 {
+    font-weight: 900;
+    font-size: 1.6em;
+}
+
+.section {
+    display: flex;
+    padding: 0.5em 0;
+    margin: auto;
+    width: 60%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.section-title {
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.exo {
+    position: relative;
+    width: 100%;
+    padding: 1.5em 1.5em 3em;
+    overflow: hidden;
+    border: 1px solid #8d86c9;
+    box-sizing: border-box;
+    border-top: 0;
+}
+.exo:first-child {
+    border-top: 1px solid #8d86c9;
+}
+@media (min-width: 800px) {
+    .exo {
+        width: 50%;
+    }
+    .exo:nth-child(2n) {
+        border-left: 0;
+    }
+    .exo:nth-child(2) {
+        border-top: 1px solid #8d86c9;
+    }
+}
+
+.category {
+    color : #725ac1;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 1.4em;
+    margin: 0;
+    margin-bottom: 0.3em;
+    font-weight: 500;
+}
+
+.exo p {
+    font-size: 1em;
+    margin: 0;
+    font-weight: 500;
+    color: #cac4ce;
+}
+
+.lien-epreuve {
+    letter-spacing: 0.03em;
+    border-radius: 3px;
+    float: right;
+    color: #f7ece1;
+    padding: 0.2em 0.4em;
+    background-color: #725ac1;
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    text-decoration: none;
+}

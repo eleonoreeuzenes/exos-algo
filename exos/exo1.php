@@ -1,5 +1,6 @@
 <?php
-
+include('../inc/header.php') ?>
+<?php
 /* === Exo 1 :Roman to Integer ===
 
 source : https://leetcode.com
@@ -90,4 +91,25 @@ It is guaranteed that s is a valid roman numeral in the range [1, 3999].
         }
         return $result;
         }
-            
+        ?>
+
+
+
+        <!-- snippetHTML -->
+        <pre><code class="language-php">
+        for ($i=0; $i < strlen($s); $i++) {
+                    // condition si ma lettre romaine a une valeur moins grande que la suivante 
+                    if ($romanNumber[$s[$i]] < $romanNumber[$s[$i + 1]] ) {
+                        //on ajoute au résultat la soustraction : la lettre suivante - la lettre actuelle
+                            $result += $romanNumber[$s[$i + 1]] - $romanNumber[$s[$i]];
+                        // on passe à la lettre suivante
+                            $i++;
+                        }
+                        else {
+                            // sinon on a joute la lettre au résultat
+                            $result += $romanNumber[$s[$i]];   
+                        }
+                }
+        </code></pre>
+
+<?php include('../inc/footer.php') ?>

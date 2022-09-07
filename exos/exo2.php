@@ -1,5 +1,6 @@
 <?php
-
+include('../inc/header.php') ?>
+<?php
 /* === Exo 2 : Two sum ===
 
 source : https://leetcode.com
@@ -52,3 +53,23 @@ function twoSum($nums, $target)
         }
     }
 }
+?>
+
+
+
+        <!-- snippetHTML -->
+        <pre><code class="language-php">
+                    function twoSum($nums, $target)
+            {
+                $output = [];
+                for ($i = 0;$i < count($nums);$i++) {
+                    for ($j = $i + 1;$j < count($nums);$j++) {
+                        if ($nums[$i] + $nums[$j] == $target) {
+                            return $output = [$i, $j];
+                        }
+                    }
+                }
+            }
+        </code></pre>
+
+<?php include('../inc/footer.php') ?>
